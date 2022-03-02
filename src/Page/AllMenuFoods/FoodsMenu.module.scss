@@ -1,0 +1,47 @@
+@import "./../../Styles/index.scss";
+
+.foodMenu {
+  width: 100%;
+  min-height: 80vh;
+  padding-top: 120px;
+  padding-bottom: 40px;
+  background-color: #1a1814;
+
+  &__container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 0.5rem;
+
+
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    h4 {
+      font-size: 20px;
+      color: #AAAAAA;
+      margin-bottom: 20px;
+      display: inline-block;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 60%;
+        right: -230%;
+        width: 200%;
+        background: #AAAAAA;
+        height: 1px;
+      }
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      color: #cda45e;
+      margin-bottom: 25px;
+    }
+  }
+}

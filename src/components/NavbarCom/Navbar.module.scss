@@ -1,0 +1,181 @@
+@import "./../../Styles/index.scss";
+@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+.header {
+  background: transparent;
+  width: 100%;
+  transition: 0.4s ease all;
+  //padding: 0 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  //@include breakpoint(md) {
+  //  padding: 0 3rem;
+  //}
+
+  //overflow: hidden;
+  &__container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 .5rem;
+    //@include breakpoint(md) {
+    //  padding: 0 3rem;
+    //}
+    overflow: hidden;
+    &__content {
+      padding: 1rem 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $light;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 100;
+
+      &__logo {
+        span {
+          font-family: 'Pushster', cursive !important;
+          font-size: 1.3rem;
+          color: white;
+          cursor: pointer;
+        }
+      }
+
+      &__nav {
+        top: 0;
+        right: 100%;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: rgba($dark, 0.9);
+        backdrop-filter: blur(2px);
+        transform: translate(0);
+        transition: 0.4s ease transform;
+
+        @include breakpoint(md) {
+          transform: none;
+          flex-direction: row;
+          background: transparent;
+          width: auto;
+          height: 100%;
+          position: static;
+        }
+        ul {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: $spacing-lg;
+          @include breakpoint(md) {
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 0;
+            //margin-right: calc(0.5rem + #{$spacing-md});
+          }
+          li {
+            &:not(:last-child) {
+              margin-bottom: $spacing-lg;
+              @include breakpoint(md) {
+                margin-bottom: 0;
+                margin-right: $spacing-md;
+              }
+            }
+            a {
+              text-decoration: none;
+              color: white;
+              padding: 0.75rem 1.25rem;
+              border-radius: $borderRadius;
+              transition: 0.3s ease all;
+
+              &:hover {
+                background: rgba($light, .1);
+              }
+              &:active {
+                border-radius: calc(#{$borderRadius} + 6px);
+                background: linear-gradient(rgba($light, 0.1) rgba($light, .2));
+              }
+            }
+          }
+        }
+       &.isMenu {
+         transform: translate(100%);
+       }
+      }
+      //&__icons {
+      //  display: flex;
+      //  align-items: center;
+      //
+      //  &__item {
+      //    margin-right: 10px;
+      //  }
+      //
+      //}
+      &__icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__toggle {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          font-size: 1.7rem;
+          z-index: 1000;
+          @include breakpoint(md) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.exit {
+  color: white;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  text-decoration: none;
+
+  :hover {
+    color: #AAAAAA;
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

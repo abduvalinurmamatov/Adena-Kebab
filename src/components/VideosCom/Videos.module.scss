@@ -1,0 +1,59 @@
+@import "./../../Styles/index.scss";
+
+.section_video {
+  width: 100%;
+  min-height: 80vh;
+
+  img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .video {
+    width: 100%;
+    height: 100%;
+    padding-top: 120px;
+    padding-bottom: 40px;
+
+    &__container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 0.5rem;
+
+      p {
+        color: white;
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+        color: rgb(250, 197, 100);
+        line-height: 2em;
+      }
+
+      &__box {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+        &__items {
+          width: 100%;
+          height: 300px;
+          border-radius: $borderRadius;
+
+          iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: $borderRadius;
+          }
+        }
+      }
+    }
+  }
+
+}

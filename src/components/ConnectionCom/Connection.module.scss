@@ -1,0 +1,143 @@
+@import "./../../Styles/index.scss";
+
+.communication {
+  width: 100%;
+  min-height: 80vh;
+  z-index: 1;
+  &__image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .header {
+    width: 100%;
+    height: 100%;
+    padding-top: 120px;
+
+    &__container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 0 0.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+
+      &__row {
+        margin-bottom: 20px;
+
+        p {
+          color: white;
+          font-size: 1rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+          color: rgb(250, 197, 100);
+          line-height: 2em;
+        }
+
+        &__col {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          grid-gap: 20px;
+
+          &__card {
+            width: 100%;
+            height: 200px;
+            border-radius: $borderRadius;
+
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: $borderRadius;
+              object-fit: cover;
+            }
+          }
+
+        }
+
+        // Part 2
+        &__location {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+          grid-gap: 20px;
+
+          &__items {
+            height: auto;
+
+            &:nth-child(1) {
+              iframe {
+                width: 100%;
+                height: 100%;
+                border-radius: $borderRadius;
+              }
+            }
+
+            input {
+              height: 50px;
+              padding: 5px;
+              outline: none;
+              color: #212020;
+              font-size: 1.2rem;
+              border: 0.5px solid white;
+              background: rgba($light, 0.5);
+
+            }
+            input::placeholder {
+              color: #212020;
+            }
+
+            &__user {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+              grid-gap: 10px;
+              margin-bottom: 20px;
+            }
+
+            &__subject {
+              margin-bottom: 10px;
+
+              input {
+                width: 100%;
+              }
+            }
+
+            &__comment {
+              width: 100%;
+              height: 100px;
+
+              textarea {
+                width: 100%;
+                height: 100%;
+                outline: none;
+                background: rgba($light, 0.5);
+                color: #151313;
+                padding: 5px;
+                font-size: 1.2rem;
+                border: 0.5px solid white;
+              }
+            }
+
+            &__submit {
+              width: 100%;
+              margin: 10px 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              input {
+                width: 10rem;
+                border-radius: 20px;
+                background: #40392d;
+                border: none;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
